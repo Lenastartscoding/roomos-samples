@@ -34,7 +34,7 @@
     <h2>Ich bin dein KI Assistent.<br>Wie kann ich dir weiterhelfen?</h2>
     <div class="row">
       <template x-for="service in services">
-        <a class="service" :href="'sip:' + service.url" :class="service.name.toLowerCase()">
+        <a class="service" :href="'tel:' + service.phoneNumber" :class="service.name.toLowerCase()">
           <div class="avatar"></div>
           <label x-text="service.name"></label>
         </a>
