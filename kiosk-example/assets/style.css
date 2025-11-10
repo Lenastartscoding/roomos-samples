@@ -25,7 +25,7 @@ body {
   font-family: CiscoSansThin, arial;
   background:
     url('./images/THOWL_logo.png') no-repeat 5% 5%,
-    url('./images/background.jpg') no-repeat center center / cover;
+    url('./images/webexbackground.jpg') no-repeat center center / cover;
   background-color: #007481;
   color: white;
   font-size: 36px;
