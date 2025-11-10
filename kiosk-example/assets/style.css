@@ -100,7 +100,8 @@ button {
 }
 
 /* Nur Advice Avatar */
-.advice .avatar { background-image: url('./images/KI_Bot_Icon.png'); }
+.advice .avatar { background-image: url('./images/KI_Bot_Icon.png'); 
+}
 
 .back {
   position: absolute;
