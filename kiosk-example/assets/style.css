@@ -99,11 +99,7 @@ button {
   background-size: cover;
 }
 
-/* Nur Advice Avatar */
-.advice.avatar { 
-  background-image: 
-    url('./images/KI_Bot_Icon.png'); 
-}
+.Advice .avatar { background-image: url('./images/THOWL_bot.png'); }
 
 .back {
   position: absolute;
