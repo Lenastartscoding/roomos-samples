@@ -2,7 +2,7 @@ function setup() {
   Alpine.store('model', {
     currentPage: 'home',
     currentLanguage: 'english',
-    dialNumber: 'erica.talking@ivr.vc',
+    dialNumber: '+16286820037',
 
     init() {
       const params = new URLSearchParams(location.search);
