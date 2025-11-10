@@ -19,7 +19,7 @@ function setup() {
     get services() {
       // Nur Advice Service
       return [
-        { url: this.dialNumber, name: 'Gespräch starten' }
+        { phoneNumber: this.dialNumber, name: 'Gespräch starten' }
       ];
     },
   });
