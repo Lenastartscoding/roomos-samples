@@ -1,40 +1,28 @@
-
 function setup() {
-
   Alpine.store('model', {
-    currentPage: 'home', // 'home', 'service'
+    currentPage: 'home',
     currentLanguage: 'english',
     dialNumber: 'erica.talking@ivr.vc',
-    services: [],
 
     init() {
       const params = new URLSearchParams(location.search);
-      if (params.has('number')) {
-        this.dialNumber = params.get('number');
-      }
-      this.services = [
-        { url: this.dialNumber, name: 'Loan' },
-        { url: this.dialNumber, name: 'Advice' },
-        { url: this.dialNumber, name: 'Credit' },
+      if (params.has('number')) this.dialNumber = params.get('number');
+    },
+
+    get page() { return this.currentPage; },
+    set page(nextPage) { this.currentPage = nextPage; },
+
+    languages: ['english', 'norwegian'],
+    get language() { return this.currentLanguage; },
+    set language(lang) { this.currentLanguage = lang; },
+
+    get services() {
+      // Nur Advice Service
+      return [
+        { url: this.dialNumber, name: 'Advice' }
       ];
     },
-    get page() {
-      return this.currentPage;
-    },
-    set page(nextPage) {
-      this.currentPage = nextPage;
-    },
-    currentLanguage: 'english',
-    languages: ['english', 'norwegian'],
-    get language() {
-      return this.currentLanguage;
-    },
-    set language(current) {
-      this.currentLanguage = current;
-    },
   });
-
 }
 
 document.addEventListener('alpine:init', setup);
-
