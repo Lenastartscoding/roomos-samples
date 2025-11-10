@@ -94,12 +94,11 @@ button {
   border-radius: 50%;
   height: 200px;
   width: 200px;
+  background-image: url('./images/THOWL_Bot.png');
   margin: 1em 0;
   background-position: center center;
   background-size: cover;
 }
-
-.avatar { background-image: url('./images/THOWL_Bot.png'); }
 
 .back {
   position: absolute;
