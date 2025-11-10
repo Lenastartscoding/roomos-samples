@@ -23,14 +23,11 @@ body {
   justify-content: center;
   align-items: center;
   font-family: CiscoSansThin, arial;
-
-  /* Hintergrundbild-Einstellungen */
   background-image: url('./images/TH_OWL_Background.jpeg');
-  background-position: center center;   /* zentriert das Bild */
-  background-repeat: no-repeat;         /* kein Wiederholen */
-  background-size: cover;               /* füllt den ganzen Bildschirm */
-  background-attachment: fixed;         /* bleibt beim Scrollen stehen (optional) */
-
+  background-position: 5% 5%;
+  background-repeat: no-repeat;
+  background-size: 120px auto;
+  background-color: #007481;
   color: white;
   font-size: 36px;
 }
