@@ -17,19 +17,35 @@ html, body {
 }
 
 body {
+  margin: 0;
   padding: 5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: CiscoSansThin, arial;
-  background:
-    url('./images/THOWL_logo.png') no-repeat 5% 5%,
-    url('./images/webexbackground.jpg') no-repeat center center / cover;
-  background-color: #007481;
   color: white;
   font-size: 36px;
+
+  background-image: 
+    url('./images/THOWL_logo.png'),
+    url('./images/webexbackground.jpg');  /* ← ersetze durch dein Vollbildbild */
+  background-repeat: 
+    no-repeat,
+    no-repeat;
+  background-position: 
+    5% 5%,        /* Logo oben links */
+    center center; /* Hauptbild mittig */
+  background-size: 
+    120px auto,   /* Logo bleibt klein */
+    cover;        /* Hauptbild füllt den ganzen Bildschirm */
+  background-attachment:
+    scroll,
+    fixed;        /* optional: Hauptbild bleibt beim Scrollen fixiert */
+
+  background-color: #007481; /* Fallback-Farbe */
 }
+
 
 
 a, button {
