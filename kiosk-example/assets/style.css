@@ -17,7 +17,6 @@ html, body {
 }
 
 body {
-  margin: 0;
   padding: 5vw;
   display: flex;
   flex-direction: column;
@@ -26,63 +25,45 @@ body {
   font-family: CiscoSansThin, arial;
   color: white;
   font-size: 36px;
-
   background-image: 
     url('./images/THOWL_logo.png'),
-    url('./images/webexbackground.jpg');  /* ← ersetze durch dein Vollbildbild */
-  background-repeat: 
-    no-repeat,
-    no-repeat;
-  background-position: 
-    5% 5%,        /* Logo oben links */
-    center center; /* Hauptbild mittig */
-  background-size: 
-    120px auto,   /* Logo bleibt klein */
-    cover;        /* Hauptbild füllt den ganzen Bildschirm */
-  background-attachment:
-    scroll,
-    fixed;        /* optional: Hauptbild bleibt beim Scrollen fixiert */
-
-  background-color: #007481; /* Fallback-Farbe */
+    url('./images/webexbackground.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: 5% 5%, center center;
+  background-size: 120px auto, cover;
+  background-attachment: scroll, fixed;
+  background-color: #007481;
 }
-
-
 
 a, button {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:hover, button:hover {
   text-decoration: underline;
 }
 
-h1 {
-  font-size: 100px;
-}
-
-h2 {
-  font-size: 50px;
-}
-
-h1, h2 {
-  text-align: center;
-}
+h1 { font-size: 100px; }
+h2 { font-size: 50px; }
+h1, h2 { text-align: center; }
 
 .touch-to-start {
   animation: pulse 1.6s linear infinite;
 }
 
 @keyframes pulse {
-  0% { transform: scale(1) }
-  50% { transform: scale(1.07) }
-  100% { transform: scale(1) }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+  100% { transform: scale(1); }
 }
 
 .languages {
-  display: none;
+  display: flex;
+  gap: 1em;
   position: absolute;
   bottom: 5vw;
   right: 5vw;
@@ -94,6 +75,7 @@ h1, h2 {
 
 .row {
   display: flex;
+  justify-content: center;
 }
 
 .service {
@@ -118,9 +100,8 @@ button {
   background-size: cover;
 }
 
-.Loan .avatar { background-image: url('./images/avatar1.png'); }
-.Advice .avatar { background-image: url('./images/avatar2.jpg'); }
-.Credit .avatar { background-image: url('./images/ahauge.png'); }
+/* Nur Advice Avatar */
+.advice .avatar { background-image: url('./images/avatar2.jpg'); }
 
 .back {
   position: absolute;
