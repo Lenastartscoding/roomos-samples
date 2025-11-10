@@ -99,7 +99,7 @@ button {
   background-size: cover;
 }
 
-.Advice .avatar { background-image: url('./images/THOWL_Bot.png'); }
+.avatar { background-image: url('./images/THOWL_Bot.png'); }
 
 .back {
   position: absolute;
