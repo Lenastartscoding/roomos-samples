@@ -5,45 +5,42 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kiosk Mode</title>
-  <!-- <link rel="icon" type="image/png" href="assets/logo.png"> -->
-  <link rel="stylesheet" href="assets/style.css"></link>
+  <link rel="stylesheet" href="assets/style.css">
   <script src="src/main.js" defer></script>
   <script src="src/alpine.js" defer></script>
-  <!-- <script src="https://unpkg.com/alpinejs" defer></script> -->
 </head>
-<body
-  x-cloak
-  x-data="{ page, services, language, languages } = $store.model"
->
+<body x-cloak x-data="$store.model">
+  <!-- Home Screen -->
   <div class="home-screen" x-show="page === 'home'">
     <h1>Herzlich Willkommen</h1>
+    <h2 @click="page='service'" class="touch-to-start">
+      Berühre den Bildschirm um zu beginnen
+    </h2>
 
-    <h2 @click="page = 'service'" class="touch-to-start">Berühre den Bildschirm um zu beginnen</h2>
-
-    <div class="languages">
-      <template x-for="current in languages">
+    <div class="languages" x-show="true">
+      <template x-for="lang in languages">
         <div
           class="language"
-          x-text="current"
-          @click="language = current"
-          :class="language === current && 'selected'"
+          x-text="lang"
+          @click="language = lang"
+          :class="{ selected: language === lang }"
         ></div>
       </template>
     </div>
   </div>
 
-  <div class="service" x-show="page === 'service'">
+  <!-- Service Screen -->
+  <div class="service" x-show="page==='service'">
     <h2>Wähle dein Anliegen aus</h2>
     <div class="row">
       <template x-for="service in services">
-        <a class="service" x-bind:href="'sip:'+ service.url" :class="service.name">
+        <a class="service" :href="'sip:' + service.url" :class="service.name.toLowerCase()">
           <div class="avatar"></div>
           <label x-text="service.name"></label>
         </a>
       </template>
     </div>
-    <button @click="page = 'home'" class="back">Zurück</button>
+    <button @click="page='home'" class="back">Zurück</button>
   </div>
 </body>
-
 </html>
