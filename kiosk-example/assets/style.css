@@ -101,7 +101,7 @@ button {
 }
 
 /* Nur Advice Avatar */
-.advice .avatar { background-image: url('./images/avatar2.jpg'); }
+.advice .avatar { background-image: url('./images/call_icon_pink.png'); }
 
 .back {
   position: absolute;
