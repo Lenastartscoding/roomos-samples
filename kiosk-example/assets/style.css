@@ -62,8 +62,7 @@ h1, h2 { text-align: center; }
 }
 
 .languages {
-  display: flex;
-  gap: 1em;
+  display: none;
   position: absolute;
   bottom: 5vw;
   right: 5vw;
