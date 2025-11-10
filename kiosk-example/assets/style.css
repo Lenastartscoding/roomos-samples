@@ -23,14 +23,14 @@ body {
   justify-content: center;
   align-items: center;
   font-family: CiscoSansThin, arial;
-  background-image: url('./images/THOWL_logo.png');
-  background-position: 5% 5%;
-  background-repeat: no-repeat;
-  background-size: 120px auto;
+  background:
+    url('./images/THOWL_logo.png') no-repeat 5% 5%,
+    url('./images/background.jpg') no-repeat center center / cover;
   background-color: #007481;
   color: white;
   font-size: 36px;
 }
+
 
 a, button {
   color: inherit;
