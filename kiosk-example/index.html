@@ -31,7 +31,7 @@
 
   <!-- Service Screen -->
   <div class="service" x-show="page==='service'">
-    <h2>Wähle dein Anliegen aus</h2>
+    <h2>Ich bin dein KI Assistent.<br>Wie kann ich dir weiterhelfen?</h2>
     <div class="row">
       <template x-for="service in services">
         <a class="service" :href="'sip:' + service.url" :class="service.name.toLowerCase()">
